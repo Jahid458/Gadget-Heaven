@@ -1,0 +1,218 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro",
+    "product_image": "https://i.ibb.co.com/S3LPzXV/Apple-i-Phone-15-Pro.jpg",
+    "category": "Phone",
+    "price": 1199,
+    "description": "The latest iPhone with advanced performance and an improved camera system.",
+    "specification": [
+      "6.1-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+      "Face ID security",
+      "Up to 1TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "color_options": ["Silver", "Space Black", "Gold", "Deep Purple"]
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy Z Fold 5",
+    "product_image": "https://i.ibb.co.com/Dr5sLS9/Samsung-Galaxy-Z-Fold-5.jpg",
+    "category": "Phone",
+    "price": 1799,
+    "description": "A foldable smartphone with a flexible display for ultimate productivity.",
+    "specification": [
+      "7.6-inch Foldable AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "12GB RAM, 512GB storage",
+      "Triple-camera system with 50MP main sensor",
+      "5,000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "foldable": true
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Apple MacBook Pro 14\" M3",
+    "product_image": "https://i.ibb.co.com/p134bxH/apple-macbook-pro-all.webp",
+    "category": "MacBook",
+    "price": 2499,
+    "description": "The ultimate laptop for professionals with the new M3 chip.",
+    "specification": [
+      "14.2-inch Liquid Retina XDR display",
+      "M3 chip with 16-core Neural Engine",
+      "32GB RAM, 1TB SSD",
+      "Battery life up to 18 hours",
+      "Backlit Magic Keyboard"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "warranty": "1 year limited"
+  },
+  {
+    "product_id": "P004",
+    "product_title": "Google Pixel Watch 2",
+    "product_image": "https://i.ibb.co.com/MBk95qQ/pix-watch-2.jpg",
+    "category": "Smart Watch",
+    "price": 399,
+    "description": "The perfect smart watch for Android users with advanced health tracking.",
+    "specification": [
+      "1.4-inch AMOLED display",
+      "Heart rate and SpO2 sensors",
+      "Built-in GPS",
+      "Water-resistant up to 50m",
+      "24-hour battery life"
+    ],
+    "availability": false,
+    "rating": 4.5,
+    "strap_material": "Fluoroelastomer"
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Anker Soundcore Liberty 4",
+    "product_image": "https://i.ibb.co.com/c1vKtYy/Anker-Soundcore-Liberty-4.jpg",
+    "category": "Accessories",
+    "price": 129,
+    "description": "True wireless earbuds with exceptional sound quality and noise cancellation.",
+    "specification": [
+      "Hi-Res sound with LDAC",
+      "Active noise cancellation",
+      "8-hour playtime per charge",
+      "IPX5 water resistance",
+      "Wireless charging case"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "noise_cancellation": "Active"
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Apple MacBook Air 13\" M2",
+    "product_image": "https://i.ibb.co.com/MCDQCJD/images.jpg",
+    "category": "Laptop",
+    "price": 1199,
+    "description": "Lightweight, powerful, and long-lasting with the new M2 chip.",
+    "specification": [
+      "13.6-inch Liquid Retina display",
+      "M2 chip with 10-core GPU",
+      "16GB RAM, 512GB SSD",
+      "18-hour battery life",
+      "MagSafe charging"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "weight": "2.7 pounds"
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Garmin Forerunner 965",
+    "product_image": "https://i.ibb.co.com/zF5H0Gr/Garmin-Forerunner-965.jpg",
+    "category": "Smart Watch",
+    "price": 599,
+    "description": "Advanced running watch with heart rate monitoring and built-in maps.",
+    "specification": [
+      "1.4-inch AMOLED display",
+      "Built-in GPS and mapping",
+      "Up to 23 days battery life",
+      "VO2 Max tracking",
+      "Lightweight titanium bezel"
+    ],
+    "availability": false,
+    "rating": 4.6,
+    "sports_modes": ["Running", "Cycling", "Swimming"]
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Sony WH-1000XM4 Headphones",
+    "product_image": "https://i.ibb.co.com/mh78xr8/Sony-WH-1000-XM4-Headphones.jpg",
+    "category": "Accessories",
+    "price": 349,
+    "description": "Noise-canceling over-ear headphones with exceptional audio quality.",
+    "specification": [
+      "30-hour battery life",
+      "Touch control",
+      "Adaptive sound control",
+      "Multi-device connectivity",
+      "Quick attention mode"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "foldable_design": true
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Samsung Galaxy Watch 6",
+    "product_image": "https://i.ibb.co.com/sQ8j24p/Samsung-Galaxy-Watch-6.jpg",
+    "category": "Smart Watch",
+    "price": 349,
+    "description": "Stylish and powerful smartwatch with advanced fitness tracking features.",
+    "specification": [
+      "1.5-inch Super AMOLED display",
+      "Heart rate and ECG monitoring",
+      "Sleep tracking",
+      "40-hour battery life",
+      "Customizable watch faces"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "strap_options": ["Leather", "Silicone"]
+  },
+  {
+    "product_id": "P010",
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co.com/yQH9fh8/Logitech-MX-Master-3-S.jpg",
+    "category": "Accessories",
+    "price": 99,
+    "description": "Ergonomic wireless mouse with ultra-fast scrolling and precise tracking.",
+    "specification": [
+      "4000 DPI sensor",
+      "Customizable buttons",
+      "USB-C rechargeable",
+      "70-day battery life",
+      "Silent clicks"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "compatibility": ["Windows", "macOS", "Linux"]
+  },
+  {
+    "product_id": "P011",
+    "product_title": "Apple AirPods Pro 2",
+    "product_image": "https://i.ibb.co.com/b6qNT2B/Apple-Air-Pods-Pro-2.jpg",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Enhanced sound quality and active noise cancellation in a sleek design.",
+    "specification": [
+      "Adaptive EQ",
+      "Transparency mode",
+      "Spatial audio with head tracking",
+      "MagSafe charging case",
+      "IPX4 water and sweat resistance"
+    ],
+    "availability": false,
+    "rating": 4.7,
+    "wireless_charging": true
+  },
+  {
+    "product_id": "P012",
+    "product_title": "Dell XPS 15",
+    "product_image": "https://i.ibb.co.com/gd2HYnR/dell-xps-15.jpg",
+    "category": "Laptop",
+    "price": 1899,
+    "description": "A powerful and sleek laptop designed for content creators and professionals.",
+    "specification": [
+      "15.6-inch 4K UHD+ display",
+      "Intel Core i9 12th Gen",
+      "NVIDIA GeForce RTX 3050 Ti",
+      "32GB RAM, 1TB SSD",
+      "Up to 12 hours battery life"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "weight": "4.5 pounds"
+  }
+]

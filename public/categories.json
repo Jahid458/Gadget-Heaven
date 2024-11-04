@@ -1,0 +1,26 @@
+[
+  {
+    "category": "All",
+    "product_id": "P000"
+  },
+  {
+    "category": "Phone",
+    "product_id": "P001"
+  },
+  {
+    "category": "MacBook",
+    "product_id": "P003"
+  },
+  {
+    "category": "Smart Watch",
+    "product_id": "P004"
+  },
+  {
+    "category": "Accessories",
+    "product_id": "P005"
+  },
+  {
+    "category": "Laptop",
+    "product_id": "P006"
+  }
+]
