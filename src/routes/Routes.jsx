@@ -5,6 +5,7 @@ import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import ProductCard from "../Components/ProductCard";
+import ProductDetails from "../pages/ProductDetails";
 
 
 
@@ -12,6 +13,7 @@ const routes = createBrowserRouter([
   {
     path:'/',
     element:  <MainLayout />, 
+    errorElement: <p>No Data Found</p>,
     children:[
       {
         path:'/',
@@ -42,6 +44,11 @@ const routes = createBrowserRouter([
         {
           path:'/dashboard',
           element: <Dashboard />
+        },
+        {
+            path:'/product/:product_id',
+            element:<ProductDetails />,
+            loader:() => fetch('../products.json')
         }
     ]
   }

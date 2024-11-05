@@ -1,10 +1,11 @@
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+   const location = useLocation();
   return (
-  <div className="container mx-auto bg-[#9538E2]  px-12 bg-">
+  <div className={`container mx-auto  ${ location.pathname === '/'? 'bg-[#9538E2]':'' }  px-12  `}>
    <div className="navbar   ">
     <div className="navbar-start ">
       <div className="dropdown">
@@ -40,9 +41,12 @@ const Navbar = () => {
             <Link to="/dashboard">Dashboard</Link>
       </ul>
     </div>
-    <div className="navbar-end flex gap-5 ">
-       <IoCartOutline className="bg-white  w-8 h-8 text-black  rounded-full"/>
-       <CiHeart className="bg-white w-8 h-8 text-black rounded-full" />
+    <div className="navbar-end flex gap-5 relative">
+      
+       <IoCartOutline className=" border w-8 h-8 text-black  rounded-full "/>         
+       <span className="absolute bg-gray-600 rounded-full p-1 px-2 font-bold right-8 -top-4 text-white">0</span>
+      <CiHeart className="border  w-8 h-8 text-black rounded-full" /> 
+      <span className="absolute bg-gray-600 rounded-full p-1 px-2 font-bold  -top-4  text-white">0</span>
 
     </div>
     </div>

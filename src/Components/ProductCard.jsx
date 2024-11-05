@@ -11,8 +11,9 @@ const ProductCard = () => {
     if(category){
       const filterByCategory = [...data].filter(product=>product.category ===category)
     setProducts(filterByCategory)
-    }else{
-      setProducts(data.slice(0,6))
+    }
+    else{
+      setProducts(data.slice(0,9))
     }
   },[category,data])
 
