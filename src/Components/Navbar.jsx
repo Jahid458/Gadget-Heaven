@@ -7,7 +7,7 @@ const Navbar = () => {
    //|| location.pathname.includes('/category')
 
   return (
-  <div className={`container mx-auto  ${ location.pathname === '/' || location.pathname.includes('/category') ? 'bg-[#9538E2]':'' }  px-12  `}>
+  <div className={`container mx-auto  ${ location.pathname === '/' || location.pathname.includes('/category') ? 'bg-[#9538E2] ':'' }  px-12  `}>
    <div className="navbar   ">
     <div className="navbar-start ">
       <div className="dropdown">
@@ -26,21 +26,24 @@ const Navbar = () => {
           </svg>
         </div>
         <ul
+        //
           tabIndex={0}
           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
             <Link to="/">Home</Link>
             <Link to="/statistics">Statistics</Link>
             <Link to="/dashboard">Dashboard</Link>
+            <Link to="/about">About</Link>
        
         </ul>
       </div>
       <a className="btn btn-ghost text-xl">Gadget Heaven</a>
     </div>
     <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal px-1 gap-5">
-            <Link to="/">Home</Link>
-            <Link to="/statistics">Statistics</Link>
-            <Link to="/dashboard">Dashboard</Link>
+      <ul className="menu menu-horizontal px-1 gap-5 text-xl font-bold ">
+            <Link className="hover:text-[#9538E2]" to="/">Home</Link>
+            <Link className="hover:text-[#9538E2]" to="/statistics">Statistics</Link>
+            <Link className="hover:text-[#9538E2]" to="/dashboard">Dashboard</Link>
+            <Link className="hover:text-[#9538E2]" to="/about">About</Link>
       </ul>
     </div>
     <div className="navbar-end flex gap-5 relative">

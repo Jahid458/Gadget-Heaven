@@ -8,6 +8,9 @@ import ProductCard from "../Components/ProductCard";
 import ProductDetails from "../pages/ProductDetails";
 import CartList from "../Components/CartList";
 import WishList from "../Components/WishList";
+import About from "../Components/About";
+import ErroPage from "../Components/ErrorPage";
+import ErrorPage from "../Components/ErrorPage";
 
 
 
@@ -16,7 +19,7 @@ const routes = createBrowserRouter([
   {
     path:'/',
     element:  <MainLayout />, 
-    errorElement: <p>No Data Found</p>,
+    errorElement:<ErrorPage />,
     children:[
       {
         path:'/',
@@ -37,10 +40,20 @@ const routes = createBrowserRouter([
             path:'/category/All',
             element:<ProductCard />,
             loader:() => fetch('../products.json')
+          },
+          {
+            path:'/category/Proccesor',
+            element:<ErroPage />
           }
+
         ]
       },
       {
+           path:'/about',
+          element:<About />
+
+      },
+       {
           path:'/statistics',
           element:<Statistics />
         },

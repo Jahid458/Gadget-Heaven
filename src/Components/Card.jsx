@@ -7,7 +7,7 @@ const Card = ({product}) => {
   const {product_title,product_image,price,product_id} = product || {}
   return (
     <div>
-      <div className="card glass w-56">
+      <div className="card glass w-56 ">
   <figure>
     <img
       src={product_image}
