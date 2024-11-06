@@ -2,8 +2,9 @@
 /* eslint-disable no-cond-assign */
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoreCartList } from "../utils";
+import { getStoreCartList, removeCart } from "../utils";
 import CartDetails from "./CartDetails";
+import toast from "react-hot-toast";
 
 
 
@@ -18,10 +19,26 @@ const CartList = () => {
   const handleSort = () =>{
     
       const sortedPrice = [...cartList].sort((a,b)=> b.price - a.price);
-      console.log('abcd')
       setCartList(sortedPrice)
 
-    
+  }
+
+  const handleRemove =(id)=>{
+    removeCart(id);
+    const storedCartList = getStoreCartList();
+    // const storedCartInt = storedCartList.map(id => parseInt(id))
+
+    const cartItems = [];
+    for(const item of storedCartList ){
+      const onlyData = allProducts.find(product => product.product_id == item)
+      cartItems.push(onlyData)
+    }
+
+    // const  getStoreList = allProducts.filter(product => storedCartInt.includes(product.product_id))
+    setCartList(cartItems)
+
+    const Addprice = cartItems.reduce((pre,curr) => pre + curr.price, 0)
+    setPrice(Addprice)
   }
 
  
@@ -43,8 +60,10 @@ const CartList = () => {
 
   },[allProducts])
 
- 
 
+
+ 
+ 
 
   return (
     <div className="mt-5">
@@ -54,17 +73,22 @@ const CartList = () => {
         <div className="flex gap-4">
           <h1 className="mt-2 text-2xl font-bold">Total Cost:${price}</h1>
           <button onClick={handleSort} className="btn bg-[#9538E2] rounded-full text-white text-md"> Sort By Price </button>
-          <button className="btn bg-[#9538E2] rounded-full text-white text-md">Purchase</button>
+          <button onClick={()=>handleRemove(cartList.product_id)}  className="btn bg-[#9538E2] rounded-full text-white text-md">Purchase</button>
         </div>
       </div>
            {/* Cart List here */}
        <h1 className="text-2xl ml-5 mt-2">Cart List</h1>
       {
-        cartList.map(cart => <CartDetails key={cart.product_id} cart={cart}></CartDetails>)
+        cartList.map(cart => <CartDetails   key={cart.product_id} cart={cart}></CartDetails>)
       }
+
+
 
       
     </div>
+
+
+
   );
 }
 

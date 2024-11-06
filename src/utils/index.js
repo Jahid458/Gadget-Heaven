@@ -1,5 +1,6 @@
 import toast from "react-hot-toast";
 
+
 const getStoreCartList = ()=>{
   // cart list
    const storedListStr = localStorage.getItem('cart-list');
@@ -55,5 +56,15 @@ const addToWishList = (id)=>{
   }
 }
 
+// remove cart List 
+const removeCart=(id)=>{
 
-export {addToCartList,addToWishList,getStoreCartList,getStoreWishList}
+  const storedList = getStoreCartList();
+  const deleteList = storedList.filter(product => product.product_id !== id);
+  localStorage.setItem('cart-list', JSON.stringify(deleteList))
+  toast.success('Successfully Purched!')
+
+}
+
+
+export {addToCartList,addToWishList,getStoreCartList,getStoreWishList,removeCart}

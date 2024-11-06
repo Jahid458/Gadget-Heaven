@@ -1,6 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 
+
 const Dashboard = () => {
+
+
+
   return (
     <div>
          <div className="bg-[#9538E2] p-16 mb-5 flex flex-col justify-center items-center ">

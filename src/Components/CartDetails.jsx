@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 import { TiDeleteOutline } from "react-icons/ti";
-const CartDetails = ({cart}) => {
+const CartDetails = ({cart,handleRemove}) => {
   
   return (
     <div>
      
-       <div  className="flex justify-between  p-5 border shadow-lg border-gray-300 rounded-md mt-5">
+       <div onClick={()=>handleRemove('product_id')}  className="flex justify-between  p-5 border shadow-lg border-gray-300 rounded-md mt-5">
             <div className="flex gap-5">
             <img className="rounded-full  w-[150px] h-[145px]" src={cart.product_image} alt="" />
             <div className="flex flex-col gap-3">
