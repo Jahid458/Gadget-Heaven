@@ -1,11 +1,19 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-constant-condition */
 /* eslint-disable no-cond-assign */
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate} from "react-router-dom";
 import { getStoreCartList, removeCart } from "../utils";
 import CartDetails from "./CartDetails";
-import toast from "react-hot-toast";
 
+
+
+const navigate = useNavigate();
+
+
+const handleCloseModal = () =>{
+  navigate("/")
+}
 
 
 const CartList = () => {                            
@@ -23,8 +31,10 @@ const CartList = () => {
 
   }
 
+
   const handleRemove =(id)=>{
     removeCart(id);
+   
     const storedCartList = getStoreCartList();
     // const storedCartInt = storedCartList.map(id => parseInt(id))
 
@@ -33,17 +43,23 @@ const CartList = () => {
       const onlyData = allProducts.find(product => product.product_id == item)
       cartItems.push(onlyData)
     }
-
-    // const  getStoreList = allProducts.filter(product => storedCartInt.includes(product.product_id))
     setCartList(cartItems)
 
     const Addprice = cartItems.reduce((pre,curr) => pre + curr.price, 0)
     setPrice(Addprice)
+
+
+    if(cartList.length > 0){
+      document.getElementById('Purchase_Modal').showModal()
+    }
+   
   }
+
 
  
   useEffect(()=>{
     const storedCartList = getStoreCartList();
+    
     // const storedCartInt = storedCartList.map(id => parseInt(id))
 
     const cartItems = [];
@@ -72,7 +88,10 @@ const CartList = () => {
         <div></div>
         <div className="flex gap-4">
           <h1 className="mt-2 text-2xl font-bold">Total Cost:${price}</h1>
-          <button onClick={handleSort} className="btn bg-[#9538E2] rounded-full text-white text-md"> Sort By Price </button>
+          <button id="purchase" 
+          onClick={handleSort } className="btn bg-[#9538E2] rounded-full text-white text-md"> 
+            
+            Sort By Price </button>
           <button onClick={()=>handleRemove(cartList.product_id)}  className="btn bg-[#9538E2] rounded-full text-white text-md">Purchase</button>
         </div>
       </div>
@@ -83,6 +102,23 @@ const CartList = () => {
       }
 
 
+              
+
+      <dialog id="Purchase_Modal" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-2xl mx-32">Congratulations!</h3>
+          <p className="py-4 font-bold text-xl mx-32">Payment SuccesdFully</p>
+          <p>Thanks For Purchasing</p>
+            <p>Total: ${price}</p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button onClick={handleCloseModal} className="btn rounded-full px-20 ">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      
 
       
     </div>
