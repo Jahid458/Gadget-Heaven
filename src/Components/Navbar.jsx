@@ -40,10 +40,10 @@ const Navbar = () => {
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1 gap-5 text-xl font-bold ">
-            <Link className="hover:text-[#9538E2]" to="/">Home</Link>
-            <Link className="hover:text-[#9538E2]" to="/statistics">Statistics</Link>
-            <Link className="hover:text-[#9538E2]" to="/dashboard">Dashboard</Link>
-            <Link className="hover:text-[#9538E2]" to="/about">About</Link>
+            <Link className="hover:text-yellow-400" to="/">Home</Link>
+            <Link className="hover:text-yellow-400" to="/statistics">Statistics</Link>
+            <Link className="hover:text-yellow-400" to="/dashboard">Dashboard</Link>
+            <Link className="hover:text-yellow-400" to="/about">About</Link>
       </ul>
     </div>
     <div className="navbar-end flex gap-5 relative">

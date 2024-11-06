@@ -15,6 +15,7 @@ const ProductDetails = () => {
   console.log(allProductData);
 
   const [product, setProduct] = useState({});
+
   useEffect(() => {
     const oneData = allProductData.find(
       (product) => product.product_id === parseInt(product_id)
@@ -91,8 +92,8 @@ const ProductDetails = () => {
           
                  <button onClick={()=>handleAddCart(product_id)} className="btn rounded-full bg-[#9538E2] hover:bg-[#9538E2] text-white text-lg">Add to Cart <CiShoppingCart className="text-4xl "/></button>
 
-            
-              <button onClick={()=>handleWishList(product_id)}><CiHeart className="bg-white border   text-black rounded-full mt-2 text-4xl" /></button>
+              <button 
+             onClick={()=>handleWishList(product_id)}><CiHeart className="bg-white border   text-black rounded-full mt-2 text-4xl" /></button>
             </div>
           </div>
         </div>
