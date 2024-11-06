@@ -4,8 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
    const location = useLocation();
+   //|| location.pathname.includes('/category')
+
   return (
-  <div className={`container mx-auto  ${ location.pathname === '/'? 'bg-[#9538E2]':'' }  px-12  `}>
+  <div className={`container mx-auto  ${ location.pathname === '/' || location.pathname.includes('/category') ? 'bg-[#9538E2]':'' }  px-12  `}>
    <div className="navbar   ">
     <div className="navbar-start ">
       <div className="dropdown">

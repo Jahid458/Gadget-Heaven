@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable no-cond-assign */
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoreCartList } from "../utils";
@@ -9,16 +11,39 @@ const CartList = () => {
   const allProducts = useLoaderData();
   
   const [cartList,setCartList] = useState([]);
+  const [price,setPrice]= useState(0)
+
+  // const [sort,setSort] = useState(allProducts);
+
+  const handleSort = () =>{
+    
+      const sortedPrice = [...cartList].sort((a,b)=> b.price - a.price);
+      console.log('abcd')
+      setCartList(sortedPrice)
+
+    
+  }
 
  
   useEffect(()=>{
     const storedCartList = getStoreCartList();
-    const storedCartInt = storedCartList.map(id => parseInt(id))
+    // const storedCartInt = storedCartList.map(id => parseInt(id))
 
-    const  getStoreList = allProducts.filter(product => storedCartInt.includes(product.product_id))
-    setCartList(getStoreList)
+    const cartItems = [];
+    for(const item of storedCartList ){
+      const onlyData = allProducts.find(product => product.product_id == item)
+      cartItems.push(onlyData)
+    }
 
-  },[])
+    // const  getStoreList = allProducts.filter(product => storedCartInt.includes(product.product_id))
+    setCartList(cartItems)
+
+    const Addprice = cartItems.reduce((pre,curr) => pre + curr.price, 0)
+    setPrice(Addprice)
+
+  },[allProducts])
+
+ 
 
 
   return (
@@ -27,8 +52,8 @@ const CartList = () => {
       <div className="flex justify-between "> 
         <div></div>
         <div className="flex gap-4">
-          <h1 className="mt-2 text-2xl font-bold">Total Cost:0$</h1>
-          <button className="btn bg-[#9538E2] rounded-full text-white text-md">Sort By Price</button>
+          <h1 className="mt-2 text-2xl font-bold">Total Cost:${price}</h1>
+          <button onClick={handleSort} className="btn bg-[#9538E2] rounded-full text-white text-md"> Sort By Price </button>
           <button className="btn bg-[#9538E2] rounded-full text-white text-md">Purchase</button>
         </div>
       </div>

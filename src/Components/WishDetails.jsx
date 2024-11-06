@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { TiDeleteOutline } from "react-icons/ti";
 
 const WishDetails = ({ wish }) => {
