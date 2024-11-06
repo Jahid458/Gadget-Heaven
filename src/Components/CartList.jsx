@@ -2,18 +2,13 @@
 /* eslint-disable no-constant-condition */
 /* eslint-disable no-cond-assign */
 import { useEffect, useState } from "react";
-import { useLoaderData, useNavigate} from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import { getStoreCartList, removeCart } from "../utils";
 import CartDetails from "./CartDetails";
 
 
 
-const navigate = useNavigate();
 
-
-const handleCloseModal = () =>{
-  navigate("/")
-}
 
 
 const CartList = () => {                            
@@ -22,7 +17,6 @@ const CartList = () => {
   const [cartList,setCartList] = useState([]);
   const [price,setPrice]= useState(0)
 
-  // const [sort,setSort] = useState(allProducts);
 
   const handleSort = () =>{
     
@@ -88,8 +82,7 @@ const CartList = () => {
         <div></div>
         <div className="flex gap-4">
           <h1 className="mt-2 text-2xl font-bold">Total Cost:${price}</h1>
-          <button id="purchase" 
-          onClick={handleSort } className="btn bg-[#9538E2] rounded-full text-white text-md"> 
+          <button id="purchase" onClick={handleSort } className="btn bg-[#9538E2] rounded-full text-white text-md"> 
             
             Sort By Price </button>
           <button onClick={()=>handleRemove(cartList.product_id)}  className="btn bg-[#9538E2] rounded-full text-white text-md">Purchase</button>
@@ -113,7 +106,7 @@ const CartList = () => {
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button onClick={handleCloseModal} className="btn rounded-full px-20 ">Close</button>
+              <button className="btn rounded-full px-20 ">Close</button>
             </form>
           </div>
         </div>
