@@ -1,6 +1,6 @@
 [
   {
-    "product_id": "P001",
+    "product_id": 1,
     "product_title": "Apple iPhone 15 Pro",
     "product_image": "https://i.ibb.co.com/S3LPzXV/Apple-i-Phone-15-Pro.jpg",
     "category": "Phone",
@@ -18,7 +18,7 @@
     "color_options": ["Silver", "Space Black", "Gold", "Deep Purple"]
   },
   {
-    "product_id": "P002",
+    "product_id": 2,
     "product_title": "Samsung Galaxy Z Fold 5",
     "product_image": "https://i.ibb.co.com/Dr5sLS9/Samsung-Galaxy-Z-Fold-5.jpg",
     "category": "Phone",
@@ -36,7 +36,7 @@
     "foldable": true
   },
   {
-    "product_id": "P003",
+    "product_id": 3,
     "product_title": "Apple MacBook Pro 14\" M3",
     "product_image": "https://i.ibb.co.com/p134bxH/apple-macbook-pro-all.webp",
     "category": "MacBook",
@@ -54,7 +54,7 @@
     "warranty": "1 year limited"
   },
   {
-    "product_id": "P004",
+    "product_id": 4,
     "product_title": "Google Pixel Watch 2",
     "product_image": "https://i.ibb.co.com/MBk95qQ/pix-watch-2.jpg",
     "category": "Smart Watch",
@@ -72,7 +72,7 @@
     "strap_material": "Fluoroelastomer"
   },
   {
-    "product_id": "P005",
+    "product_id": 5,
     "product_title": "Anker Soundcore Liberty 4",
     "product_image": "https://i.ibb.co.com/c1vKtYy/Anker-Soundcore-Liberty-4.jpg",
     "category": "Accessories",
@@ -90,7 +90,7 @@
     "noise_cancellation": "Active"
   },
   {
-    "product_id": "P006",
+    "product_id": 6,
     "product_title": "Apple MacBook Air 13\" M2",
     "product_image": "https://i.ibb.co.com/MCDQCJD/images.jpg",
     "category": "Laptop",
@@ -108,7 +108,7 @@
     "weight": "2.7 pounds"
   },
   {
-    "product_id": "P007",
+    "product_id": 7,
     "product_title": "Garmin Forerunner 965",
     "product_image": "https://i.ibb.co.com/zF5H0Gr/Garmin-Forerunner-965.jpg",
     "category": "Smart Watch",
@@ -126,7 +126,7 @@
     "sports_modes": ["Running", "Cycling", "Swimming"]
   },
   {
-    "product_id": "P008",
+    "product_id": 8,
     "product_title": "Sony WH-1000XM4 Headphones",
     "product_image": "https://i.ibb.co.com/mh78xr8/Sony-WH-1000-XM4-Headphones.jpg",
     "category": "Accessories",
@@ -144,7 +144,7 @@
     "foldable_design": true
   },
   {
-    "product_id": "P009",
+    "product_id": 9,
     "product_title": "Samsung Galaxy Watch 6",
     "product_image": "https://i.ibb.co.com/sQ8j24p/Samsung-Galaxy-Watch-6.jpg",
     "category": "Smart Watch",
@@ -162,7 +162,7 @@
     "strap_options": ["Leather", "Silicone"]
   },
   {
-    "product_id": "P010",
+    "product_id": 10,
     "product_title": "Logitech MX Master 3S",
     "product_image": "https://i.ibb.co.com/yQH9fh8/Logitech-MX-Master-3-S.jpg",
     "category": "Accessories",
@@ -180,7 +180,7 @@
     "compatibility": ["Windows", "macOS", "Linux"]
   },
   {
-    "product_id": "P011",
+    "product_id": 11,
     "product_title": "Apple AirPods Pro 2",
     "product_image": "https://i.ibb.co.com/b6qNT2B/Apple-Air-Pods-Pro-2.jpg",
     "category": "Accessories",
@@ -198,7 +198,7 @@
     "wireless_charging": true
   },
   {
-    "product_id": "P012",
+    "product_id": 12,
     "product_title": "Dell XPS 15",
     "product_image": "https://i.ibb.co.com/gd2HYnR/dell-xps-15.jpg",
     "category": "Laptop",

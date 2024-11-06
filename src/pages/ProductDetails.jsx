@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
+import { addToCartList, addToWishList } from "../utils";
+
 
 
 const ProductDetails = () => {
@@ -15,13 +17,22 @@ const ProductDetails = () => {
   const [product, setProduct] = useState({});
   useEffect(() => {
     const oneData = allProductData.find(
-      (product) => product.product_id === product_id
+      (product) => product.product_id === parseInt(product_id)
     );
     setProduct(oneData);
   }, [allProductData, product_id]);
 
   const {product_title,product_image,price,description,specification,rating} = product;
-  console.log(product_title)
+
+  const handleAddCart = (id) =>{
+      addToCartList(id)
+  }
+
+  const handleWishList = (id) =>{
+    addToWishList(id)
+  }
+
+  
 
   return (
     <div>
@@ -75,8 +86,13 @@ const ProductDetails = () => {
             
            
             <div className="card-actions justify-start mb-10">
-              <button className="btn rounded-full bg-[#9538E2] hover:bg-[#9538E2] text-white text-lg">Add to Cart <CiShoppingCart className="text-4xl "/></button>
-              <button><CiHeart className="bg-white border   text-black rounded-full mt-2 text-4xl" /></button>
+
+              
+          
+                 <button onClick={()=>handleAddCart(product_id)} className="btn rounded-full bg-[#9538E2] hover:bg-[#9538E2] text-white text-lg">Add to Cart <CiShoppingCart className="text-4xl "/></button>
+
+            
+              <button onClick={()=>handleWishList(product_id)}><CiHeart className="bg-white border   text-black rounded-full mt-2 text-4xl" /></button>
             </div>
           </div>
         </div>

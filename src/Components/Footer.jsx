@@ -8,7 +8,6 @@ const Footer = () => {
         <p className="font-semibold text-xl">Leading the way in cutting-edge technology and innovation.</p>
       </div>
      
-  
     
       <div className="flex gap-32">
 
