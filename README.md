@@ -1,28 +1,14 @@
-
-# Gadget Heaven 
-
+# Gadget Heaven
 
 The GadgetHaven e-commerce platform is a responsive web application built using React. It features a structured navigation system, dynamic product filtering, and comprehensive cart and wishlist functionalities managed via Context API and LocalStorage for a seamless user experience.
 
-# Requirement Link - 
-https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assignment-08.pdf
-
-# React Fundamental Concepts
-
-- component 
-- props
-- usestate
-- React Toastify
-- useEffect
-- React Router
-
-# Storage Used 
-- LocalStorage
-
 # Feature List
+
 - Product Filtering by Category
 - Add WishList in Dashboard
 - Product sort by Price
-- Add Cart in localstorage 
+- Add Cart in localstorage
 - Sort By Price in Cart Dashboard
-git push 
+- Product Contained With Json Data 
+- The application utilizes LocalStorage to persist product data in the cart and wishlist,   
+  ensuring that items remain accessible even after page reloads or browser closure, enhancing the continuity of the user experience.
