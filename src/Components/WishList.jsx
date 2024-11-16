@@ -15,9 +15,6 @@ const WishList = () => {
 
     const  getWishList = allProducts.filter(product => storedWishInt.includes(product.product_id))
     setWishList(getWishList)
-    
-
-
   },[])
   return (
     <div>

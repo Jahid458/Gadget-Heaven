@@ -39,7 +39,7 @@ const ProductDetails = () => {
     <div>
       <div className="bg-[#9538E2] p-16 mb-5 ">
         <h1 className="text-center text-3xl text-white">Product Details</h1>
-        <p className="w-3/5 ml-44 mt-5 text-center text-md text-white">
+        <p className="text-lg mt-5 text-center text-md text-white">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>

@@ -17,10 +17,11 @@ const ProductCard = () => {
     }
   },[category,data])
 
-  console.log(data)           
+  console.log(data)      
+  //    
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-72 gap-y-5 ml-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full   ">
      {
       produsts.map(product => <Card key={product.id} product={product}></Card>)
      } 

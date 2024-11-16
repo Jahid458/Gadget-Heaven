@@ -4,10 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
    const location = useLocation();
-   //|| location.pathname.includes('/category')
 
   return (
-  <div className={`container mx-auto  ${ location.pathname === '/' || location.pathname.includes('/category') ? 'bg-[#9538E2] ':'' }  px-12  `}>
+  <div className={`container mx-auto  ${ location.pathname === '/' || location.pathname.includes('/category') ? 'bg-[#9538E2] ':'' }  lg:px-12  `}>
    <div className="navbar   ">
     <div className="navbar-start ">
       <div className="dropdown">
@@ -41,7 +40,6 @@ const Navbar = () => {
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1 gap-5 text-xl font-bold ">
             <Link className="hover:text-yellow-400" to="/">Home</Link>
-            <Link className="hover:text-yellow-400" to="/statistics">Statistics</Link>
             <Link className="hover:text-yellow-400" to="/dashboard">Dashboard</Link>
             <Link className="hover:text-yellow-400" to="/about">About</Link>
       </ul>

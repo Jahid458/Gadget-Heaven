@@ -10,7 +10,7 @@ const Categories = ({ categories }) => {
           to={`/category/${category.category}`}
           key={category.category}
           
-          className={({isActive})=>`btn rounded-full text-xl font-bold py-2 ${isActive ? 'hover:bg-[#9538E2] hover:text-white':''}`}
+          className={({isActive})=>`btn lg:rounded-full p-12 -mx-5 lg:text-xl text-sm font-bold py-2 ${isActive ? 'hover:bg-[#9538E2] hover:text-white':''}`}
         >
           {category.category}
         </NavLink>

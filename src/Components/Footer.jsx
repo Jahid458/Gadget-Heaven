@@ -9,7 +9,7 @@ const Footer = () => {
       </div>
      
     
-      <div className="flex gap-32">
+      <div className="flex lg:gap-32 flex-col lg:flex-row mr-40 gap-5">
 
       <nav className="flex flex-col gap-2">
         <h6 className="footer-title text-black text-lg">Service</h6>
