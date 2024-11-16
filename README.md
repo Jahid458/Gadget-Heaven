@@ -25,8 +25,4 @@ https://github.com/ProgrammingHero1/B10-A8-gadget-heaven/blob/main/Batch-10_Assi
 - Product sort by Price
 - Add Cart in localstorage 
 - Sort By Price in Cart Dashboard
-# Links
-
- - Git Link -> https://github.com/programming-hero-web-course2/b10a8-gadget-heaven-Jahid458
-
- - Live Link -> https://heavenofgadget.netlify.app/
+git push 
